@@ -6,20 +6,125 @@
     @return map-get($font-weights, $weight-name);
 }
 
-body {
-    background: $primary-color;
-    color: $text-color;
+@function get-gutter($gutter-name){
+    @return map-get($gutters, $gutter-name);
 }
 
-.main{
-    width: 80%;
+@mixin mobile { 
+    @media (max-width: $r-mobile) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (max-width: $s-mobile){
+        @content;
+    }
+}
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    line-height: get-gutter(medium);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-color;
+}
+
+main {
+    width: 70%;
     margin: 0 auto;
 
-    #{&}__header {
-        font-weight: weight(regular);
+    @include mobile {
+        width: 100%;
+        padding: get-gutter(small);
+    }
+}
 
-        &:hover {
-            color: $accent-color;
+.nav{
+    #{&}__header {
+        font-weight: weight(medium);
+    }
+
+    #{&}__motto {
+        font-size: 14px;
+        padding-left: 10px;
+        color: $accent-color;
+    }
+}
+
+.hero {
+    margin-top: get-gutter(x-large);
+    padding: get-gutter(medium);
+
+    #{&}__header_wrap {
+        text-align: center;
+
+        span {
+            color: $accent-color
+        }
+    }
+
+    .intro {
+        margin-top: get-gutter(x-large);
+    
+        p {
+            font-weight: weight(regular);
+        }
+    }    
+}
+
+.concept {
+    margin-top: get-gutter(large);
+    padding: get-gutter(medium);
+    display: flex;
+    justify-content: justify-between;
+    align-items: center;
+
+    @include small-mobile {
+        flex-direction: column;
+        justify-content: center;        
+    }
+
+    #{&}__header {
+        font-weight: weight(medium);
+        margin-right: get-gutter(medium);
+
+        @include small-mobile{
+            text-transform: capitalize;
+        }
+    }
+
+    #{&}__link {
+        flex: .9;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        a{
+            transition: .2s ease-in-out;
+            font-size: 14px;
+
+            &:hover {
+                border-bottom: 2px solid $text-color;
+                padding-bottom: 3px;
+            }
+        }
+
+        & #concept__more {
+            font-size: 10px;
+        }
+
+        @include small-mobile {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
