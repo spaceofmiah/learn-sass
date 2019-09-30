@@ -20,6 +20,11 @@ a {
   color: #ff652f;
 }
 
+.active {
+  border-bottom: 3px solid #fff;
+  padding-bottom: 3px;
+}
+
 main {
   width: 70%;
   margin: 0 auto;
@@ -101,6 +106,20 @@ main {
     display: flex;
     justify-content: space-between;
   }
+}
+
+.concept__info {
+  margin-top: 28px;
+  border: 1px solid #ff652f;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  padding: 28px;
+}
+.concept__info .article__heading {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */

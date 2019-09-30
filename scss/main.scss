@@ -38,6 +38,11 @@ a {
     color: $accent-color;
 }
 
+.active {
+    border-bottom: 3px solid $text-color;
+    padding-bottom: 3px;
+}
+
 main {
     width: 70%;
     margin: 0 auto;
@@ -126,5 +131,21 @@ main {
             display: flex;
             justify-content: space-between;
         }
+    }
+}
+
+
+.concept__info {
+    margin-top: get-gutter(medium);
+    border: 1px solid $accent-color;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    padding: get-gutter(medium);
+
+    .article__heading {
+        text-transform: capitalize;
+        font-weight: weight(bold);
+        font-size: get-gutter(medium);
+        text-align: right;
     }
 }
