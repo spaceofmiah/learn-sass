@@ -69,6 +69,10 @@ main {
     margin-top: get-gutter(x-large);
     padding: get-gutter(medium);
 
+    @include small-mobile {
+        padding: 0;
+    }
+
     #{&}__header_wrap {
         text-align: center;
 
@@ -94,6 +98,7 @@ main {
     align-items: center;
 
     @include small-mobile {
+        padding: 0;
         flex-direction: column;
         justify-content: center;        
     }
@@ -143,6 +148,7 @@ main {
     padding: get-gutter(medium);
 
     .article__heading {
+        margin-bottom: get-gutter(medium);
         text-transform: capitalize;
         font-weight: weight(bold);
         font-size: get-gutter(medium);

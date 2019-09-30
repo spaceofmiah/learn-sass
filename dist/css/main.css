@@ -49,6 +49,11 @@ main {
   margin-top: 38px;
   padding: 28px;
 }
+@media (max-width: 620px) {
+  .hero {
+    padding: 0;
+  }
+}
 .hero .hero__header_wrap {
   text-align: center;
 }
@@ -71,6 +76,7 @@ main {
 }
 @media (max-width: 620px) {
   .concept {
+    padding: 0;
     flex-direction: column;
     justify-content: center;
   }
@@ -116,6 +122,7 @@ main {
   padding: 28px;
 }
 .concept__info .article__heading {
+  margin-bottom: 28px;
   text-transform: capitalize;
   font-weight: 700;
   font-size: 28px;
