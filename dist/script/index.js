@@ -62,7 +62,6 @@ const articles = {
         writeup: `
         Partials in sass are identical to modules, which helps to structure
         code base and aids keeping of identical code in thier distinct files.
-        <br />
         Partials are the sole drive for separation of concern in sass, which
         allows developer to focus on a specific development phase in a project.
         <br />
@@ -143,3 +142,8 @@ const handleArticleContentChange = (src) => {
     document.querySelector('code').innerHTML = article.code;
     document.querySelector(".article__content").innerHTML = article.writeup;
 }
+
+
+
+document.querySelector('code').innerHTML = articles["functions"].code;
+document.querySelector(".article__content").innerHTML = articles["functions"].writeup;

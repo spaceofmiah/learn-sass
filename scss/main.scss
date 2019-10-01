@@ -161,3 +161,13 @@ main {
         text-align: right;
     }
 }
+
+.footer {
+    margin: get-gutter(x-large) 0;
+    padding: get-gutter(x-large) 0;
+    text-align: center;
+
+    h1 {
+        font-weight: weight(regular);
+    }
+}
