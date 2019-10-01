@@ -99,6 +99,7 @@ main {
 .concept .concept__link a {
   transition: 0.2s ease-in-out;
   font-size: 14px;
+  outline: none;
 }
 .concept .concept__link a:hover {
   border-bottom: 2px solid #fff;
@@ -120,6 +121,12 @@ main {
   border-top-right-radius: 18px;
   border-bottom-left-radius: 18px;
   padding: 28px;
+  transition: 0.1s ease-in-out;
+}
+@media (max-width: 620px) {
+  .concept__info {
+    padding: 16px;
+  }
 }
 .concept__info .article__heading {
   margin-bottom: 28px;

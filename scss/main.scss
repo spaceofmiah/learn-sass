@@ -121,6 +121,7 @@ main {
         a{
             transition: .2s ease-in-out;
             font-size: 14px;
+            outline: none;
 
             &:hover {
                 border-bottom: 2px solid $text-color;
@@ -146,6 +147,11 @@ main {
     border-top-right-radius: 18px;
     border-bottom-left-radius: 18px;
     padding: get-gutter(medium);
+    transition: .1s ease-in-out;
+
+    @include small-mobile {
+        padding: get-gutter(x-small);
+    }
 
     .article__heading {
         margin-bottom: get-gutter(medium);
